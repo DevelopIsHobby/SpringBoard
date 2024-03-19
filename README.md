@@ -26,6 +26,19 @@
 3. 키워드 검색
 
 ---
+
+
++ 게시글 등록 화면
+<img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/91230af4-de24-4106-8bc4-cce7cf07524f">
+
+---
+
++ 게시글 수정 화면
+  <img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/2d5f5de6-4174-450b-b39d-b34203640005">
+
+---
+
+
 + 게시글 화면
 <img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/b7feeef7-af33-43a5-b159-14d95ed8b461">
 
@@ -44,15 +57,6 @@
 
 ---
 
-+ 게시글 등록 화면
-<img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/91230af4-de24-4106-8bc4-cce7cf07524f">
-
----
-
-+ 게시글 수정 화면
-  <img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/2d5f5de6-4174-450b-b39d-b34203640005">
-
----
 
 + 로그인 화면
 <img src="https://github.com/DevelopIsHobby/SpringBoard/assets/107912101/2ed0f240-74bc-42fb-92ff-49713fadc4e4">
