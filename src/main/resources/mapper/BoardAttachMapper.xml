@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myportfolio.web.mapper.BoardAttachMapper">
+    <insert id="insert">
+        insert into tb1_attach
+        (uuid, uploadPath, filename, filetype, bno)
+        values
+            (#{uuid}, #{uploadPath}, #{fileName}, #{fileType}, #{bno})
+    </insert>
+
+    <delete id="delete">
+        delete from tb1_attach where uuid=#{uuid}
+    </delete>
+
+    <delete id="deleteAll">
+        delete tb1_attach where bno = #{bno}
+    </delete>
+
+    <select id="findByBno" resultType="com.myportfolio.web.domain.BoardAttachVO">
+        select * from tb1_attach where bno = #{bno}
+    </select>
+
+    <select id="getOldFiles" resultType="com.myportfolio.web.domain.BoardAttachVO">
+        select * from tb1_attach where uploadpath = to_char(sysdate-1, 'yyyy\mm\dd')
+    </select>
+</mapper>
