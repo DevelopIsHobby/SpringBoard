@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
@@ -205,17 +205,26 @@
                     if(attach.fileType) {
                         let fileCallPath = encodeURIComponent(attach.uploadPath + "/s_" + attach.uuid + "_" + attach.fileName);
 
-                        str += "<ul><li data-path='" + attach.uploadPath + "' data-uuid='" + attach.uuid + "' data-filename='" +
+                        str += "<ul><li data-path='" + attach.uploadPath + "' data-uuid='" + attach.uuid + "' data-fileName='" +
                             attach.fileName + "' data-type='" + attach.fileType + "' ></div>";
+                        str += "<span> " + attach.fileName + "</span>";
+                        str += "<button type='button' data-file=\'" + fileCallPath + "\' data-type='image' ";
+                        str += "class='btn btn-warning btn-circle'><i class='fa fa-times'></i></button><br>";
                         str += "<img src='/display?fileName=" + fileCallPath + "'>";
                         str += "</div>";
                         str += "</li></ul>";
                     } else {
-                        str += "<ul><li data-path='" + attach.uploadPath + "' data-uuid='" + attach.uuid + "' data-filename='" +
-                            attach.fileName + "' data-type='" + attach.fileType + "' ></div>";
-                        str += "<img src='/resources/img/attatch.png'>";
+                        let fileCallPath = encodeURIComponent(attach.uploadPath + "/" + attach.uuid + "_" + attach.fileName);
+
+
+                        str += "<ul><li data-path='"+attach.uploadPath+"' data-uuid='"+attach.uuid+"' "
+                        str += "data-filename='"+attach.fileName+"' data-type='"+attach.fileType+"' ><div>";
+                        str += "<span> "+ attach.fileName+"</span><br/>";
+                        str += "<button type='button' data-file=\'"+fileCallPath+"\' data-type='file' "
+                        str += " class='btn btn-warning btn-circle'><i class='fa fa-times'></i></button><br>";
+                        str += "<img src='/resources/img/attatch.png'></a>";
                         str += "</div>";
-                        str += "</li></ul>";
+                        str +"</li></ul>";
                     }
                     $(".uploadResult").html(str);
                 })
